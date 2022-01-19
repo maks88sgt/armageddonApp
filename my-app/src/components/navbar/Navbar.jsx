@@ -9,10 +9,10 @@ const Navbar = () => {
     return (
         <nav className={s.nav}>
             <div className={s.item}>
-                <NavLink to="/asteroids">Астеройды</NavLink>
+                <NavLink to="/asteroids" className = { navData => navData.isActive ? s.active : s.item }>Астеройды</NavLink>
             </div>
             <div className={s.item}>
-                <NavLink to="/destruction">Уничтожение</NavLink>
+                <NavLink to="/destruction" className = { navData => navData.isActive ? s.active : s.item }>Уничтожение</NavLink>
             </div>
         </nav>
     )
