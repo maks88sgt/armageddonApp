@@ -1,0 +1,15 @@
+.nav {
+    display: flex;
+    margin: 4% 0 0 36%;
+    text-transform: uppercase;
+}
+
+.item {
+    margin: 0 3%;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
