@@ -19,3 +19,36 @@
     flex-flow: row nowrap;
     justify-content: flex-end;
 }
+
+.item {
+    margin: 0 3px;
+}
+
+.item a.active{
+    color: gold;
+}
+
+input[type=radio] {
+    display:none;
+    margin:10px;
+}
+
+/*
+  Change the look'n'feel of labels (which are adjacent to radiobuttons).
+  Add some margin, padding to label
+*/
+input[type=radio] + label {
+    display:inline-block;
+    margin:-2px;
+    padding: 0 4px;
+    text-decoration: underline;
+}
+/*
+ Change background color for label next to checked radio button
+ to make it look like highlighted button
+*/
+input[type=radio]:checked + label {
+    background-image: none;
+    text-decoration: none;
+    font-weight: 700;
+}
