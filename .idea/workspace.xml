@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d231e23-2920-41e3-b0c1-aeda8ba04949" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/hello.html" beforeDir="false" />
-    </list>
+    <list default="true" id="5d231e23-2920-41e3-b0c1-aeda8ba04949" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,7 +40,23 @@
       <updated>1643369624841</updated>
       <workItem from="1643369630291" duration="1131000" />
       <workItem from="1643370847680" duration="604000" />
+      <workItem from="1643377090795" duration="336000" />
     </task>
+    <task id="LOCAL-00001" summary="hi">
+      <created>1643377161055</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1643377161060</updated>
+    </task>
+    <task id="LOCAL-00002" summary="new">
+      <created>1643377407950</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1643377407950</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -59,5 +73,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="hi" />
+    <MESSAGE value="new" />
+    <option name="LAST_COMMIT_MESSAGE" value="new" />
   </component>
 </project>
