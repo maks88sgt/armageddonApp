@@ -1,0 +1,13 @@
+img {
+    height: 190px;
+    width: 970px;
+    margin: 8px 0;
+    border-radius: 20px;
+    border: black;
+    border: 1px solid black;
+}
+
+.item {
+    position: relative;
+    text-align: center;
+}
