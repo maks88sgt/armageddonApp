@@ -1,0 +1,23 @@
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    width: 760px;
+}
+
+input[type=radio] {
+    display:none;
+    margin:10px;
+}
+
+input[type=radio] + label {
+    display:inline-block;
+    margin:-2px;
+    padding: 0 4px;
+    text-decoration: underline;
+}
+
+input[type=radio]:checked + label {
+    background-image: none;
+    text-decoration: none;
+    font-weight: 700;
+}
