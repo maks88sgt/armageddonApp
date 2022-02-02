@@ -2,8 +2,9 @@ import React, {useState} from 'react';
 import s from './FilterDangerously.module.css';
 
 
-const FilterDangerously = () => {
-    const [isDangerous, setIsDangerous] = useState(false);
+const FilterDangerously = (props) => {
+    const {isDangerous, setIsDangerous} = props;
+
     return (
         <div className={s.nav}>
             <label>
