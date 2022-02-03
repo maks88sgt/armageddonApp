@@ -2,13 +2,13 @@
 
 
 export const getAsteroids = () => {
-    const arrayLength = getRandomInt(1,5);
+    const arrayLength = getRandomInt(5,10);
     const asteroids = Array.from({length: arrayLength});
     return asteroids.map(() => {
         return {
             name: names.split(" ")[getRandomInt(0, 15)],
             date: getRandomInt(1995, 2022),
-            distance: getRandomInt(0, 1000000000),
+            distance: getRandomInt(10000, 1000000000),
             size: getRandomInt(0, 100000),
             inDangerous: getRandomInt(0, 2),
 
