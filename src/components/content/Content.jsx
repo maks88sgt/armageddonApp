@@ -1,19 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Filter from './Filter/Filter';
 import Footer from "./Footer/Footer";
 import {Route, Routes} from "react-router-dom";
 import Destruction from "./Cards/destruction/Destruction";
 import Card from "./Cards/Card";
 
-const Content = () => {
+const Content = ({asteroids}) => {
+    const [isDangerous, setIsDangerous] = useState(false);
+
     return (
         <div>
             <hr></hr>
-            <Filter/>
+            <Filter isDangerous={isDangerous} setIsDangerous={setIsDangerous}/>
             <div className='menu-block'>
                 <Routes>
-                    <Route path="/" element={<Card />}/>
-                    <Route path="/asteroids" element={<Card />}/>
+                    <Route path="/" element={<Card  asteroids={asteroids} isDangerous={isDangerous}/>}/>
+                    <Route path="/asteroids" element={<Card  asteroids={asteroids} isDangerous={isDangerous}/>}/>
                     <Route path="/destruction" element={<Destruction />}/>
                 </Routes>
             </div>

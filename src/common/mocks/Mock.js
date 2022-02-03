@@ -11,6 +11,7 @@ export const getAsteroids = () => {
             distance: getRandomInt(0, 1000000000),
             size: getRandomInt(0, 100000),
             inDangerous: getRandomInt(0, 2),
+
         }
     })
 }
