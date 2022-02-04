@@ -5,7 +5,9 @@ import Destruction from './../../../../img/asteroid3.png';
 import Close from './../../../../img/asteroid1.png';
 
 
-const TextCard = ({asteroid}) => {
+const TextCard = ({asteroids, isDistance, asteroid}) => {
+    const asteroidsDistance = isDistance ? asteroids.filter(asteroid=>asteroid.distance/1000) : asteroids.distance;
+
     return (
         <div className={asteroid.inDangerous ? s.greenGradient : s.redGradient}>
             <img src={dino} className={s.dino} alt=""/>
@@ -13,6 +15,9 @@ const TextCard = ({asteroid}) => {
             <div className={s.nav}>
                 <div className={s.header}>{asteroid.name}</div>
                 <div className={s.item}>Дата {asteroid.date}</div>
+
+                {asteroidsDistance.map((asteroid) => <div className={s.item}>Расстояние {asteroid.distance}</div>)}
+
                 <div className={s.item}>Расстояние {asteroid.distance}</div>
                 <div className={s.item}>Размер {asteroid.size}</div>
             </div>

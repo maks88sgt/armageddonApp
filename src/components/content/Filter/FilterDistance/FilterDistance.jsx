@@ -8,9 +8,11 @@ const FilterDistance = (props) => {
         <div className={s.nav}>
             <div>Расстояние </div>
             <form>
-                <input type="radio" id="radio1" name="radios" value="all"/>
+                <input type="radio" id="radio1" name="radios" value="all"
+                       onClick={()=>setIsDistance(!isDistance)}/>
                 <label htmlFor="radio1">в километрах,</label>
-                <input type="radio" id="radio2" name="radios" value="false"/>
+                <input type="radio" id="radio2" name="radios" value="false"
+                       onClick={()=>setIsDistance(!isDistance)}/>
                 <label htmlFor="radio2">в дистанциях до луны</label>
             </form>
         </div>
