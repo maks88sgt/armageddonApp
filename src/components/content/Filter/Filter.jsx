@@ -9,8 +9,10 @@ const Filter = (props) => {
 
     return (
         <div className={s.nav}>
-            <FilterDangerously isDangerous={isDangerous} setIsDangerous={setIsDangerous}/>
-            <FilterDistance isDistance={isDistance} setIsDistance={setIsDistance}/>
+            <FilterDangerously isDangerous={isDangerous}
+                               setIsDangerous={setIsDangerous}/>
+            <FilterDistance isDistance={isDistance}
+                            setIsDistance={setIsDistance}/>
         </div>
     )
 }

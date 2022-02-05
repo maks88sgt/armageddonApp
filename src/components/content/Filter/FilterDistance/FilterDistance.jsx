@@ -1,20 +1,23 @@
 import React from 'react';
+import classNames from "classnames";
 import s from './FilterDistance.module.css';
+import './FilterDistance.module.css';
 
 const FilterDistance = (props) => {
     const {isDistance, setIsDistance} = props;
 
+    const classKilometers = classNames({
+        'kilometers': isDistance,
+    })
+
+    const classMoon = classNames ({
+        'kilometers': !isDistance,
+    })
+
     return (
         <div className={s.nav}>
-            <div>Расстояние </div>
-            <form>
-                <input type="radio" id="radio1" name="radios" value="all"
-                       onClick={()=>setIsDistance(!isDistance)}/>
-                <label htmlFor="radio1">в километрах,</label>
-                <input type="radio" id="radio2" name="radios" value="false"
-                       onClick={()=>setIsDistance(!isDistance)}/>
-                <label htmlFor="radio2">в дистанциях до луны</label>
-            </form>
+            <div>Расстояние <span className={classKilometers} onClick={() => setIsDistance(true)}>в километрах</span>,
+                <span className={classMoon} onClick={() => setIsDistance(false)}>в дистанциях до луны</span></div>
         </div>
     )
 }

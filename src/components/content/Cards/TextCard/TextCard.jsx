@@ -5,25 +5,25 @@ import Destruction from './../../../../img/asteroid3.png';
 import Close from './../../../../img/asteroid1.png';
 
 
-const TextCard = ({asteroids, isDistance, asteroid}) => {
-    const asteroidsDistance = isDistance ? asteroids.filter(asteroid=>asteroid.distance/1000) : asteroids.distance;
+const TextCard = ({asteroid, isDistance}) => {
+
+    const distanceObject = isDistance ? `${asteroid.distance.kilometers} км` : `${asteroid.distance.moon} км`
+
+    const statusObject= asteroid.inDangerous ? "опасен" : "неопасен";
 
     return (
-        <div className={asteroid.inDangerous ? s.greenGradient : s.redGradient}>
+        <div className={asteroid.inDangerous ? s.redGradient : s.greenGradient}>
             <img src={dino} className={s.dino} alt=""/>
-            <img src={asteroid.inDangerous ? Close : Destruction} className={s.logoRed} alt=""/>
+            <img src={asteroid.inDangerous ? Destruction : Close} className={s.logoRed} alt=""/>
             <div className={s.nav}>
                 <div className={s.header}>{asteroid.name}</div>
                 <div className={s.item}>Дата {asteroid.date}</div>
-
-                {asteroidsDistance.map((asteroid) => <div className={s.item}>Расстояние {asteroid.distance}</div>)}
-
-                <div className={s.item}>Расстояние {asteroid.distance}</div>
+                <div className={s.item}>Расстояние {distanceObject}</div>
                 <div className={s.item}>Размер {asteroid.size}</div>
             </div>
             <div className={s.grade}>
                 <div className={s.text}>Оценка:</div>
-                <div className={s.status}>{asteroid.inDangerous ? "неопасен" : "опасен"}</div>
+                <div className={s.status}>{statusObject}</div>
                 <button>На уничтожение</button>
             </div>
         </div>

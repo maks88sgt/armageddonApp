@@ -4,6 +4,7 @@ import TextCard from "./TextCard/TextCard";
 
 
 const Card = ({showDangerous, asteroids, isDistance}) => {
+
     const asteroidsArray = showDangerous ? asteroids.filter(asteroid=>asteroid.inDangerous) : asteroids;
 
     return (
