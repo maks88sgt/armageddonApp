@@ -5,11 +5,14 @@ import FilterDistance from "./FilterDistance/FilterDistance";
 
 const Filter = (props) => {
     const {isDangerous, setIsDangerous} = props;
+    const {isDistance, setIsDistance} = props;
 
     return (
         <div className={s.nav}>
-            <FilterDangerously isDangerous={isDangerous} setIsDangerous={setIsDangerous}/>
-            <FilterDistance/>
+            <FilterDangerously isDangerous={isDangerous}
+                               setIsDangerous={setIsDangerous}/>
+            <FilterDistance isDistance={isDistance}
+                            setIsDistance={setIsDistance}/>
         </div>
     )
 }

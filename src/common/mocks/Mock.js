@@ -8,7 +8,10 @@ export const getAsteroids = () => {
         return {
             name: names.split(" ")[getRandomInt(0, 15)],
             date: getRandomInt(1995, 2022),
-            distance: getRandomInt(10000, 1000000000),
+            distance: {
+                kilometers: getRandomInt(1000000, 1000000000),
+                moon:  Math.round(getRandomInt(0, 100000)/1000),
+            },
             size: getRandomInt(0, 100000),
             inDangerous: getRandomInt(0, 2),
 
