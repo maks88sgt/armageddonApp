@@ -6,7 +6,7 @@ export const getAsteroids = () => {
     const asteroids = Array.from({length: arrayLength});
     return asteroids.map(() => {
         return {
-            name: names.split(" ")[getRandomInt(0, 15)],
+            name: names.split(" ")[getRandomInt(0, 15000000000)],
             date: getRandomInt(1995, 2022),
             distance: {
                 kilometers: getRandomInt(1000000, 1000000000),
