@@ -24,6 +24,7 @@
 }
 
 .nav {
+    width: 270px;
     position: absolute;
     display: flex;
     flex-direction: column;
