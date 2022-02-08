@@ -19,7 +19,7 @@ const Content = () => {
     const year = dateObj.getUTCFullYear();
 
     useEffect(()=>{
-        fetch('https://api.nasa.gov/neo/rest/v1/feed?start_date=2022-02-06&end_date=2022-02-08&api_key=hkQaHyIJbOLvUSJqbj6Djuty0kImWfPu0Nu8yyB3')
+        fetch('https://api.nasa.gov/neo/rest/v1/feed?start_date=2022-02-06&end_date=${year}-${monthNew}-${day}&api_key=hkQaHyIJbOLvUSJqbj6Djuty0kImWfPu0Nu8yyB3')
             .then(response => response.json())
                 .then(data => {
                     let asteroids = [];
