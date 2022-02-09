@@ -14,12 +14,11 @@ const Content = () => {
 
     const dateObj = new Date();
     const day = dateObj.getUTCDate().toString();
-    const month = dateObj.getMonth() + 1; //months from 1-12
-    const monthNew = month.toString();
+    const month = (dateObj.getMonth() + 1).toString(); //months from 1-12
     const year = dateObj.getUTCFullYear();
 
     useEffect(()=>{
-        fetch('https://api.nasa.gov/neo/rest/v1/feed?start_date=2022-02-06&end_date=${year}-${monthNew}-${day}&api_key=hkQaHyIJbOLvUSJqbj6Djuty0kImWfPu0Nu8yyB3')
+        fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=2022-02-06&end_date=${year}-${month}-${day}&api_key=DEMO_KEY`)
             .then(response => response.json())
                 .then(data => {
                     let asteroids = [];
