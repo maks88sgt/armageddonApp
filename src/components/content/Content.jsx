@@ -1,4 +1,4 @@
-import React, {useEffect, useState,} from 'react';
+import React, {useEffect, useReducer, useState,} from 'react';
 import Filter from './Filter/Filter';
 import Footer from "./Footer/Footer";
 import {Route, Routes} from "react-router-dom";
@@ -16,6 +16,21 @@ const Content = () => {
     const day = dateObj.getUTCDate().toString();
     const month = (dateObj.getMonth() + 1).toString(); //months from 1-12
     const year = dateObj.getUTCFullYear();
+
+    const initialState = {
+        asteroidsForDestroying: [],
+    }
+
+    const asteroidsReducer = (state, action) => {
+        switch (action.type) {
+            case 'ADD':
+                return {asteroidsForDestroying: [...state.asteroidsForDestroying, action.payload]};
+            case 'DELETE':
+                return {asteroidsForDestroying: state.asteroidsForDestroying }
+        }
+    }
+
+    const [state, dispatch] = useReducer(asteroidsReducer, initialState);
 
     useEffect(()=>{
         fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=2022-02-06&end_date=${year}-${month}-${day}&api_key=DEMO_KEY`)
@@ -56,8 +71,10 @@ const Content = () => {
                                                     isDistance={isDistance}/>}/>
                     <Route path="/asteroids" element={<Card  asteroids={asteroids}
                                                              showDangerous={isDangerous}
-                                                             isDistance={isDistance}/>}/>
-                    <Route path="/destruction" element={<Destruction />}/>
+                                                             isDistance={isDistance}
+                                                             dispatch={dispatch}
+                    />}/>
+                    <Route path="/destruction" element={<Destruction forDestroying={state.asteroidsForDestroying}/>}/>
                 </Routes>
             </div>
             <Footer/>

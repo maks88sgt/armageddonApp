@@ -5,7 +5,7 @@ import Destruction from './../../../../img/asteroid3.png';
 import Close from './../../../../img/asteroid1.png';
 
 
-const TextCard = ({asteroid, isDistance}) => {
+const TextCard = ({asteroid, isDistance, dispatch}) => {
 
     const distanceObject = isDistance ? `${asteroid.distance.kilometers} км` : `${asteroid.distance.moon} км`
 
@@ -24,7 +24,7 @@ const TextCard = ({asteroid, isDistance}) => {
             <div className={s.grade}>
                 <div className={s.text}>Оценка:</div>
                 <div className={s.status}>{statusObject}</div>
-                <button>На уничтожение</button>
+                <button onClick={()=>{dispatch({type: 'ADD', payload: asteroid})}}>На уничтожение</button>
             </div>
         </div>
     )
