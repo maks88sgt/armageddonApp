@@ -8,7 +8,7 @@ const FilterDangerously = (props) => {
     return (
         <div className={s.nav}>
             <label>
-                <input type="checkbox" checked={isDangerous}
+                <input type="checkbox" defaultChecked={isDangerous}
                        onClick={()=>setIsDangerous(!isDangerous)}></input>Показать только опасные
             </label>
         </div>

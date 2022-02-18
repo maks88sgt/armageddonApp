@@ -5,15 +5,13 @@ import Content from "./components/content/Content";
 import {BrowserRouter} from "react-router-dom";
 import {getAsteroids} from "./common/mocks/Mock";
 
-
-
 const App = (props) => {
     const asteroids = getAsteroids();
 
   return (
       <BrowserRouter>
         <div className="app-wrapper">
-          <Header/>
+          <Header />
           <Content asteroids={asteroids}/>
         </div>
       </BrowserRouter>

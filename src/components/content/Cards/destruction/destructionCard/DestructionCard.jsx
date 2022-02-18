@@ -1,8 +1,7 @@
 import React from 'react';
-import s from './TextCard.module.css';
-import dino from './../../../../img/dino.png';
-import Destruction from './../../../../img/asteroid3.png';
-import Close from './../../../../img/asteroid1.png';
+import s from './DestructionCard.module.css';
+import Destruction from './../../../../../img/asteroid3.png';
+import Close from './../../../../../img/asteroid1.png';
 
 
 const TextCard = ({asteroid, isDistance, dispatch}) => {
@@ -11,10 +10,8 @@ const TextCard = ({asteroid, isDistance, dispatch}) => {
 
     const statusObject= asteroid.inDangerous ? "опасен" : "неопасен";
 
-
     return (
         <div className={asteroid.inDangerous ? s.redGradient : s.greenGradient}>
-            <img src={dino} className={s.dino} alt=""/>
             <img src={asteroid.inDangerous ? Destruction : Close} className={s.logoRed} alt=""/>
             <div className={s.nav}>
                 <div className={s.header}>{asteroid.name}</div>
@@ -23,12 +20,13 @@ const TextCard = ({asteroid, isDistance, dispatch}) => {
                 <div className={s.item}>Размер {asteroid.size}</div>
             </div>
             <div className={s.grade}>
-                <div className={s.text}>Оценка:</div>
-                <div className={s.status}>{statusObject}</div>
+                <div className={s.text}>Оценка:
+                    <div className={s.status}> {statusObject}</div>
+                </div>
                 <button onClick={()=>{dispatch({
-                    type: 'ADD',
+                    type: 'DELETE',
                     payload: asteroid
-                })}}>На уничтожение</button>
+                })}}>Убрать</button>
             </div>
         </div>
     )
