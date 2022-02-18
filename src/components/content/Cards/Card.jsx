@@ -9,8 +9,10 @@ const Card = ({showDangerous, asteroids, isDistance, dispatch}) => {
 
     return (
         <div className={s.nav}>
-            {asteroidsArray.map((asteroid) => <div className={s.item}><TextCard asteroid={asteroid}
-                                                                                isDistance={isDistance} dispatch={dispatch}/></div>)}
+            {asteroidsArray.map((asteroid) => <TextCard asteroid={asteroid}
+                                                        isDistance={isDistance}
+                                                        dispatch={dispatch}
+                                                        key={asteroid.id}/>)}
         </div>
     )
 }

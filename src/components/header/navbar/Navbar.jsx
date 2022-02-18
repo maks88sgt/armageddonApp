@@ -14,6 +14,7 @@ const Navbar = () => {
             <div className={s.item}>
                 <NavLink to="/destruction" className = { navData => navData.isActive ? s.active : s.item }>Уничтожение</NavLink>
             </div>
+            <div className={s.counter}>5</div>
         </div>
     )
 }

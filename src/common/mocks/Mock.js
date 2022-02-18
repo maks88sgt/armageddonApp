@@ -1,6 +1,4 @@
 
-
-
 export const getAsteroids = () => {
     const arrayLength = getRandomInt(5,10);
     const asteroids = Array.from({length: arrayLength});
