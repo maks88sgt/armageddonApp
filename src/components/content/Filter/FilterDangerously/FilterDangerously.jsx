@@ -10,9 +10,8 @@ const FilterDangerously = () => {
     return (
         <div className={s.nav}>
             <label>
-                <input type="checkbox" checked={state.onlyDangerous}
+                <input type="checkbox" defaultChecked={state.onlyDangerous}
     onClick={() => {
-        console.log("pressed")
         dispatch({type: 'CHANGE_ONLY_DANGEROUS'})
     }}/>Показать только опасные
             </label>
