@@ -4,7 +4,9 @@ import {MyContext} from "../../../App";
 
 export const CardContainer = () => {
     const {state, dispatch} = useContext(MyContext);
-    return <Card asteroids={state.asteroids} setDestory={()=>dispatch({type: 'TYPE',})}/>
+    return <Card asteroids={state.asteroids}
+                 onlyDangerous={state.onlyDangerous}
+                 setDestory={()=>dispatch({type: 'TYPE',})}/>
 }
 
 
