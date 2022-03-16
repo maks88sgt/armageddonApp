@@ -3,11 +3,12 @@ import Filter from './Filter/Filter';
 import Footer from "./Footer/Footer";
 import {Route, Routes} from "react-router-dom";
 import Destruction from "./Cards/destruction/Destruction";
+import {MyContext} from "../../App";
 import {CardContainer} from "./Cards/CardContainer";
-import {DestructionContainer} from "./Cards/destruction/DestroyingContainer";
 
 
 const Content = () => {
+    const {state}=useContext(MyContext);
 
     return (
         <div>
@@ -16,7 +17,7 @@ const Content = () => {
             <div className='menu-block'>
                 <Routes>
                     <Route path="/armageddonApp" element={<CardContainer />}/>
-                    <Route path="/destruction" element={<DestructionContainer />}/>
+                    <Route path="/destruction" element={<Destruction forDestroying={state.asteroidsForDestroying}/>}/>
                 </Routes>
             </div>
             <Footer/>
