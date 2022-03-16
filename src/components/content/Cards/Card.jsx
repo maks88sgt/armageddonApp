@@ -1,6 +1,5 @@
 import React from 'react';
 import s from './Card.module.css';
-import {TextCardContainer} from "./TextCard/TextCardContainer";
 import TextCard from "./TextCard/TextCard";
 
 

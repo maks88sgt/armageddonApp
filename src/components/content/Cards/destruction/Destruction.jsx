@@ -5,10 +5,9 @@ import {MyContext} from "../../../../App";
 
 
 const Destruction = (props) => {
-    const {forDestroying} = props;
-    const {state} =useContext(MyContext);
+    const {forDestroying, onlyDangerous} = props;
 
-    const forDestroyingArray = state.onlyDangerous ? forDestroying.filter(asteroid=>asteroid.inDangerous) : forDestroying;
+    const forDestroyingArray = onlyDangerous ? forDestroying.filter(asteroid=>asteroid.inDangerous) : forDestroying;
     return (
         <div className={s.nav}>
                 {forDestroyingArray.map((asteroid) => <div className={s.item}><DestructionCard asteroid={asteroid}
