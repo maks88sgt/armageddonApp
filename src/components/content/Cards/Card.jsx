@@ -1,8 +1,6 @@
 import React from 'react';
 import s from './Card.module.css';
 import {TextCardContainer} from "./TextCard/TextCardContainer";
-import TextCard from "./TextCard/TextCard";
-
 
 
 const Card = (props) => {
@@ -12,7 +10,7 @@ const Card = (props) => {
 
     return (
         <div className={s.nav}>
-            {asteroidsArray.map((asteroid) => <TextCard asteroid={asteroid}
+            {asteroidsArray.map((asteroid) => <TextCardContainer asteroid={asteroid}
                                                         key={asteroid.id}/>)}
         </div>
     )
